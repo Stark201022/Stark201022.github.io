@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta Especial</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, p {
+            text-align: center;
+        }
+        .hidden {
+            display: none;
+        }
+        button {
+            background-color: #ff6f61;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #e05246;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="parte1">
+            <img src="https://via.placeholder.com/400x200" alt="Corazón">
+            <h1>Carta Especial - Parte 1</h1>
+            <p>Querida Amiga,</p>
+            <p>Espero que estés bien cuando leas esta carta. Hay algo que he querido decirte desde hace mucho tiempo y creo que es el momento adecuado para expresarlo.</p>
+            <button onclick="mostrarParte(2)">Continuar leyendo</button>
+        </div>
+
+        <div id="parte2" class="hidden">
+            <img src="https://via.placeholder.com/400x200" alt="Corazón">
+            <h1>Carta Especial - Parte 2</h1>
+            <p>Eres una persona increíble. Desde el momento en que nos conocimos, supe que nuestra amistad sería especial. Has estado ahí para mí en los buenos y en los malos momentos, y eso significa más de lo que puedo expresar con palabras.</p>
+            <button onclick="mostrarParte(3)">Continuar leyendo</button>
+        </div>
+
+        <div id="parte3" class="hidden">
+            <img src="https://via.placeholder.com/400x200" alt="Corazón">
+            <h1>Carta Especial - Parte 3</h1>
+            <p>Lo que quiero decir es que te quiero. No solo como mi mejor amiga, sino de una manera que va más allá de eso. Tu sonrisa ilumina mi día y tu compañía llena mi corazón de alegría.</p>
+            <button onclick="mostrarParte(4)">Continuar leyendo</button>
+        </div>
+
+        <div id="parte4" class="hidden">
+            <img src="https://via.placeholder.com/400x200" alt="Corazón">
+            <h1>Carta Especial - Parte 4</h1>
+            <p>Sé que puede ser un poco sorprendente escuchar esto de mí, pero necesitaba decírtelo. No importa cómo te sientas al respecto, nuestra amistad siempre será lo más importante para mí. Si esto cambia las cosas entre nosotros, prometo respetar tus sentimientos y aceptar cualquier decisión que tomes.</p>
+            <p>Gracias por ser la increíble persona que eres. Estoy agradecido todos los días por tenerte en mi vida.</p>
+            <p>Con todo mi cariño,</p>
+            <p>[Lucian Antonio R.G. -TS]</p>
+        </div>
+    </div>
+
+    <script>
+        function mostrarParte(numeroParte) {
+            var partes = document.querySelectorAll('.container > div');
+            partes.forEach(function(parte) {
+                parte.classList.add('hidden');
+            });
+            document.getElementById('parte' + numeroParte).classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
+
